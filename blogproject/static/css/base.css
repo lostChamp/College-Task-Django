@@ -4,12 +4,13 @@ header h1 a {
 
 html, body {
     height: 100%;
+    font-size: 24px;
 }
-html {
-    display: table;
-    margin: auto;
-}
+
 body {
-    display: table-cell;
-    vertical-align: middle;
+    text-align: center;
+}
+
+.delete_button {
+    color: aqua;
 }
