@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit</title>
+    <title>Редактировать</title>
 </head>
 <body>
     {% extends 'base.html' %}
     {% block content %}
-        <h1>Edit post</h1>
+        <h1>Редактировать пост</h1>
         <form method="post" action="">
             {% csrf_token %}
             {{ form.as_p }}

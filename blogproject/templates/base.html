@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
-    <title>Home</title>
+    <title>Дом</title>
 </head>
 <body>
     <header>
         <h1>
-            <a href="/">Django blog</a>
+            <a href="/">Джанго блог</a>
         </h1>
-        <a href="{% url 'post_new' %}">+ New Blog Post</a>
+        <a href="{% url 'post_new' %}">+ Новый пост</a>
         {%block content%}
         {%endblock content%}
     </header>
+
+    {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}</p>
+        <p><a href="{% url 'logout' %}">Выйти</a></p>
+    {% else %}
+        <p>Вы не авторизованы</p>
+        <a href="{% url 'login' %}">Войти</a>
+    {% endif %}
+
 </body>
 </html>

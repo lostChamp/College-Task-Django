@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Новый</title>
+    <title>Регистрация</title>
 </head>
 <body>
     {% extends 'base.html' %}
     {% block content %}
-        <h1>Новый пост</h1>
+        <h1>Авторизация</h1>
         <form method="post" action="">
             {% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Сохранить"/>
+            <button type="submit">Регистрация</button>
         </form>
     {% endblock %}
 </body>
